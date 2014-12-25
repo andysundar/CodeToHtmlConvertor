@@ -20,19 +20,23 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
 import java.util.Properties;
 
 public final class Constant {
 
-  public static final String FILE_EXTENTION = "_blog.html";
+  public static final String FILE_EXTENTION = "_"+Calendar.getInstance().getTime().getTime()+".html";
   public static final String COMMA = ",";
   public static final String WORKING_DIR = System.getProperty("user.dir");
+  
+  private static final StringBuilder workingDirPath = new StringBuilder(WORKING_DIR).append(File.separator);
+  
   private static String fileExtentionAllowed;
   private static String[] fileExtentionAllowedList;
   private static String javaKeywords;
   private static String[] javaKeywordList;
   private static String cssFileName;
-  private static final StringBuilder workingDirPath = new StringBuilder(WORKING_DIR).append(File.separator);
+  
 
   static {
     File propsFile = new File(workingDirPath.toString() + "properties", "html.properties");
