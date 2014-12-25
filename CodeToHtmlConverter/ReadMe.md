@@ -1,3 +1,1 @@
-Read Me
-.............................................................
-This is simple tool to create html files of the source codes. 
+This is simple tool to create HTML files of the source codes. 
